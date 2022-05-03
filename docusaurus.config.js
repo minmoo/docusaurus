@@ -40,6 +40,7 @@ const config = {
       }),
     ],
   ],
+  themes: ["@docusaurus/theme-live-codeblock"],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -60,7 +61,7 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'},
           {href: 'https://minmoo.ml', label: 'Portfolio', position: 'right'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/minmoo',
             label: 'GitHub',
             position: 'right',
           },
