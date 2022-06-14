@@ -1,21 +1,22 @@
 ---
 slug: free-deploy
-title: 🆓Docusaurus 무료 배포하기(with vercel)🔥
+title: 🆓Nextjs, Docusaurus 무료 배포하기(with vercel)🔥
 authors: [minmoo]
 tags: [docusaurus, vercel]
 ---
 
-# 🆓Docusaurus 무료 배포하기(with vercel)
+# 🆓Nextjs, Docusaurus 무료 배포하기(with vercel)
 
 ## 💬 Concept
 
 ---
 
 <aside>
-📌 docusaurus + vercel 웹사이트 배포하기
+📌 Nextjs or Docusaurus + vercel 웹사이트 배포하기
 
 </aside>
 
+> Nextjs는 **React Framework**
 
 > Docusaurus는 **정적 사이트 생성 도구**
 > 
@@ -32,7 +33,49 @@ tags: [docusaurus, vercel]
 
 ### [Favicon 생성](https://www.favicon-generator.org/)
 
-`docusaurus.config.js` favicon 경로 지정 ⇒. img/favicon.ico
+- Docusaurus
+`docusaurus.config.js` favicon 경로 지정 ⇒ .img/favicon.ico
+
+- Nextjs
+`_document.tsx` Head 컴포넌트 안에 Favicon 컴포넌트 추가
+
+```tsx
+const Favicon = () => {
+	return (
+		<>
+			/* 생성된 링크 추가 */
+			<link
+				rel="icon"
+				type="image/png"
+				sizes="32x32"
+				href="/favicon/favicon-32x32.png"
+			/>
+			<link
+				rel="icon"
+				type="image/png"
+				sizes="96x96"
+				href="/favicon/favicon-96x96.png"
+			/>
+			<link
+				rel="icon"
+				type="image/png"
+				sizes="16x16"
+				href="/favicon/favicon-16x16.png"
+			/>
+			<link rel="manifest" href="/manifest.json" />
+			<meta name="msapplication-TileColor" content="#ffffff" />
+			<meta
+				name="msapplication-TileImage"
+				content="/favicon/ms-icon-144x144.png"
+			/>
+			<meta name="theme-color" content="#2e7d32" />
+		</>
+	);
+};
+
+```
+
+
 
 ### Vercel 배포 + 환경변수
 <swiper list={[
@@ -49,6 +92,7 @@ tags: [docusaurus, vercel]
 ### 도메인 발급
 
 - [freenom](https://www.freenom.com/en/index.html?lang=en) 접속 및 회원가입
+
 <swiper list={[
     {
         src: require("./img/www.freenom.com_en_index.html_langen.png").default,
