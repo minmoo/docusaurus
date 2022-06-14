@@ -1,0 +1,94 @@
+---
+slug: free-deploy
+title: 🆓Docusaurus 무료 배포하기(with vercel)🔥
+authors: [minmoo]
+tags: [docusaurus, vercel]
+---
+
+# 🆓Docusaurus 무료 배포하기(with vercel)
+
+## 💬 Concept
+
+---
+
+<aside>
+📌 docusaurus + vercel 웹사이트 배포하기
+
+</aside>
+
+
+> Docusaurus는 **정적 사이트 생성 도구**
+> 
+
+> Vercel is a platform for **frontend frameworks and static sites**
+, built to integrate with your headless content, commerce, or database.
+> 
+
+## 🧑🏻‍💻 Process
+
+---
+
+### Git project 생성 및 개발(with [docusaurus](https://docusaurus.io/ko/))
+
+### [Favicon 생성](https://www.favicon-generator.org/)
+
+`docusaurus.config.js` favicon 경로 지정 ⇒. img/favicon.ico
+
+### Vercel 배포 + 환경변수
+<swiper list={[
+    {
+        src: require("./img/vercel.com_new.png").default,
+        title: "Git project import 및 deploy"
+    },
+    {
+        src: require("./img/vercel.com_minmoo_mmlog_(4).png").default,
+        title: "연결완료"
+    }
+]}/>
+
+### 도메인 발급
+
+- [freenom](https://www.freenom.com/en/index.html?lang=en) 접속 및 회원가입
+<swiper list={[
+    {
+        src: require("./img/www.freenom.com_en_index.html_langen.png").default,
+        title: "check URL"
+    },
+    {
+        src: require("./img/www.freenom.com_en_index.html_langen_(1).png").default,
+        title: "가능한 URL Get it now 선택 → checkout"
+    },
+    {
+        src: require("./img/my.freenom.com_cart.php_aview.png").default,
+        title: "구매",
+        desc: "도메인 옵션 선택 (preiod 12 month)"
+    },
+    {
+        src: require("./img/my.freenom.com_clientarea.php_actiondomains.png").default,
+        title: "도메인 확인"
+    },
+    {
+        src: require("./img/www.freenom.com_en_index.html_langen_(1).png").default,
+        title: "가능한 URL Get it now 선택 → checkout"
+    }
+]}/>
+
+
+### 도메인 연결
+
+<swiper list={[
+    {
+        src: require("./img/my.freenom.com_clientarea.php_actiondomaindetailsid1133670910.png").default,
+        title: "Freenom → services → My Domains → manage domain"
+    },
+    {
+        src: require("./img/my.freenom.com_clientarea.php_actiondomaindetails.png").default,
+        title: "Vercel 의 네임서버 freenom에 등록(management Tools → Nameservers  → use custom nameservers)",
+        desc: ` ❗Nameserver 1에 [ns1.vercel-dns.com](http://ns1.vercel-dns.com) 입력
+    ❗Nameserver 1에 [ns2.vercel-dns.com](http://ns2.vercel-dns.com) 입력`
+    },
+    {
+        src: require("./img/vercel.com_minmoo_mmlog_(1).png").default,
+        title: "Vercel Domain 추가 (🔥 Settings → Domains → `domain` 추가)"
+    }
+]}/>

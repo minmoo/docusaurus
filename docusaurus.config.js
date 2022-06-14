@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Minmoo',
+  title: 'MMlog',
   tagline: `Minmoo's site with Dinosaurs`,
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://mmlog.ml',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'minmoo', // Usually your GitHub org/user name.
+  projectName: 'mmlog', // Usually your repo name.
 
   presets: [
     [
@@ -46,7 +46,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Minmoo',
+        title: 'MMlog',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.png',
@@ -56,7 +56,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Doc',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {href: 'https://minmoo.ml', label: 'Portfolio', position: 'right'},
@@ -74,7 +74,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Doc',
                 to: '/docs/intro',
               },
             ],
